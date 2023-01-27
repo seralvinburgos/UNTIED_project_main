@@ -1,158 +1,183 @@
-import { Badge, Box, Button, Container, Grid, Image, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, Image, useColorMode, useColorModeValue, Textarea, VStack, Center } from "@chakra-ui/react";
 import topMain from "../assets/main4.jpg";
 import mainLeft from "../assets/main1.jpg";
 import mainCenter from "../assets/main2.jpg";
-import mainRight from "../assets/main6.jpg";
+import mainRightTop from "../assets/main6.jpg";
+import mainRightBottom from "../assets/main7.jpg"
+import activitiesPic from "../assets/narrow1.jpg";
 
 export default function Home() {
     const { toggleColorMode } = useColorMode()
     const formBackground = useColorModeValue("gray.100", "gray.700")
     return (
         <>
-            <header>
-                    <Container className="home" maxWidth='container.xl' w='100%' mb='40'>
-                        <Box display="flex" flexDirection="column" position="relative">
-                            <Box h="500px" maxWidth="100%" mb={7} color="gray.800">
-                                <Image objectFit='cover' borderRadius="lg" src={topMain} alt="main_image" />
-                            </Box>
-                            <Box mt={3} pt='20' ps='10' color="gray.500" position="absolute" textAlign="center" fontSize='5xl' fontWeight='semibold'>
-                            <p>Performance Running</p>
-                            <Box ms='-20' mt='3'>
-                                <Button 
-                                    colorScheme='yellow' 
-                                    marginInline={10} 
-                                    borderRadius='50px'
-                                    height='60px'
-                                    width='150px'
-                                    >Shop men's</Button>
-                                <Button 
-                                    colorScheme='yellow'
-                                    borderRadius='50px'
-                                    height='60px'
-                                    width='150px'
-                                    >Shop women's</Button>
-                            </Box>
-                            </Box>
+            <Box className="home"
+                minH='90vh'
+                width='auto'
+                overflow='hidden'
+                >
+                <Box display="flex" flexDir='column' position="relative">
+                    <Box position='absolute'>
+                        <Image 
+                            objectFit='cover'  
+                            objectPosition='bottom right'
+                            minH='90vh'
+                            maxW='100%'
+                            height='auto'
+                            src={topMain} alt="main_image" />
+                    </Box>
+                    <Box position='relative'
+                        color="blackAlpha.800" 
+                        fontSize='5xl' 
+                        fontWeight='semibold'
+                        mt='20'
+                        ms='5'
+                        >
+                        <p>Performance Running
+                        </p>
+                        <Box>
+                            <Button 
+                                colorScheme='yellow' 
+                                marginInline={10} 
+                                borderRadius='50px'
+                                height='60px'
+                                width='150px'
+                                >Shop men's
+                            </Button>
+                            <Button 
+                                colorScheme='yellow'
+                                borderRadius='50px'
+                                height='60px'
+                                width='150px'
+                                >Shop women's
+                            </Button>
                         </Box>
-                    </Container>
-            </header>
+                    </Box>
+                </Box>
+            </Box>
             
-            <Container className="threeBoxes" maxW="container.xl" mt={10}>
-                <Grid templateColumns="repeat(3, 1fr)" gap={3}>
+
+            <Box 
+                minH='55vh'
+                width='100%'
+                backgroundColor='whiteAlpha.500'
+                display='flex'
+                flexDirection='row'
+
+            >
+                <Box>
+                    <Textarea 
+                        writing-mode='vertical-lr' 
+                        textTransform='uppercase' 
+                        transform='rotate(-90deg)'
+                        fontWeight='semibold'
+                        ms='-5'
+                        mt='10'
+                        letterSpacing='2px'
+                        border='none'
+                        >
+                            Activities
+                        </Textarea>
+                </Box>
+                <Box 
+                    className='activitiesText'
+                    width='50%'
+                    >
+                    <VStack
+                        spacing={1}
+                        alignItems='left'
+                        fontSize="6xl"
+                        fontWeight="semibold"
+                        mt='25%'
+                        >
+                        <Box>
+                            Trail Running
+                        </Box>
+                        <Box>
+                            Road Running
+                        </Box>
+                        <Box>
+                            Active Lifestyle
+                        </Box>
+                        <Box>
+                            Hiking
+                        </Box>
+                        <Box>
+                            Comfort Travel
+                        </Box>
+                    </VStack>
+                </Box>
+                <Box 
+                    className="activitiesPic"
+                    minH='55vh'
+                    width='50%'
+                >
+                    <Container centerContent>
+                        <Image 
+                            minH='40vh'
+                            objectFit='cover'
+                            maxW='90%'
+                            height='auto'
+                            boxSize='md'
+                            mt='20%'
+                            borderRadius='25px'
+                            src={activitiesPic} alt='activitiesPicture'
+                        />
+                    </Container>
+                </Box>
+            </Box>
+            <Box 
+                className="threeBoxes"
+                minH='55vh'
+                maxH='56vh'
+                width='100%'
+                height='auto'
+                bgColor='whiteAlpha'
+                overflow='hidden'
+                >
+                <Grid templateColumns="repeat(3, 1fr)">
                     <Box>
-                        <Image w="100%" borderRadius="lg" src={mainLeft} alt="image_one" />
+                        <Image 
+                            minH='50vh'
+                            objectFit='cover'
+                            w="95%" 
+                            borderRadius="lg" 
+                            src={mainLeft} alt="image_one" />
                     </Box>
                     <Box>
-                        <Image w="100%" borderRadius="lg" src={mainCenter} alt="image_two" />
+                        <Image 
+                            minH='50vh'
+                            objectFit='cover'
+                            w="95%" 
+                            borderRadius="lg" 
+                            src={mainCenter} alt="image_two" />
                     </Box>
-                    <Box>
-                        <Image w="100%" borderRadius="lg" src={mainRight} alt="image_three" />
+                    <Box 
+                        display='flex'
+                        flexDirection='column'
+                        minH='50vh'    
+                        w='95%'
+                    >
+                        <Box>
+                            <Image
+                                objectFit='cover'
+                                height='95%'
+                                w="auto" 
+                                borderRadius="lg" 
+                                src={mainRightTop} alt="image_three_one" />
+                        </Box>
+                        <Box>
+                            <Image 
+                                objectFit='cover'
+                                minH='24vh'
+                                height='50%'
+                                w="100%" 
+                                borderRadius="lg" 
+                                src={mainRightBottom} alt="image_three_two" />
+                        </Box>
                     </Box>
                 </Grid>
-            </Container>
-
-            <Container maxW="container.xl">
-                <Box display="flex" flexWrap="wrap" justifyContent="space-between" mt={10} my="10">
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="yellow"
-                    variant='outline'
-                    >Running</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Marathon</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Track</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Casual</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Wide</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Narrow</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Ultra-Marathon</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Comfort</Badge>
-                    <Badge 
-                    borderRadius="3xl" 
-                    px={4} 
-                    py={2} 
-                    mr="4" 
-                    mb="4" 
-                    textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
-                    >Business</Badge>
-                </Box>
-            </Container>
+            </Box>
         </>
     )
 }

@@ -72,7 +72,7 @@ export default function RootLayout() {
                                             <Heading mb={6}>Log in</Heading>
                                             <Input placeholder="Please enter email" variant="filled" mb={3} type="email" />
                                             <Input placeholder="*******" variant="filled" mb={6} type="password" />
-                                            <Button colorScheme="teal" mb={6}>Log in</Button>
+                                            <Button colorScheme="yellow" mb={6}>Log in</Button>
                                             <Button onClick={toggleColorMode} >Toggle Color Mode</Button>
                                         </Flex>
                                     </Flex>
@@ -82,11 +82,11 @@ export default function RootLayout() {
                     </ul>
                 </nav>
             </header>
-            <Container maxW="container.lg" marginTop={5}>
+            <Box marginTop={5}>
             <main>
                 <Outlet />
             </main>
-            </Container>
+            </Box>
         </div>
     )
 }
