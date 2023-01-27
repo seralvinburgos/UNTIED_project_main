@@ -1,4 +1,4 @@
-import { Badge, Box, Container, Grid, Image, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Badge, Box, Button, Container, Grid, Image, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import topMain from "../assets/main4.jpg";
 import mainLeft from "../assets/main1.jpg";
 import mainCenter from "../assets/main2.jpg";
@@ -10,21 +10,35 @@ export default function Home() {
     return (
         <>
             <header>
-                <Box mb={4}>
-                    <Container className="home" maxW="container.xl" >
-                        <Box h="500px" w="100%" mb={7}>
-                        <Image w="100%" borderRadius="lg" src={topMain} alt="main_image" />
-                        </Box>
-                        <Box mb={4} color="gray.900" alignItems="">
-                        <h2>Welcome</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magnam consectetur praesentium minus laboriosam, facilis aliquam voluptates vel expedita vero, est iure porro, rerum repellendus consequatur deserunt id esse animi exercitationem aliquid. Quas incidunt praesentium officia iusto minima voluptas cumque.</p>
+                    <Container className="home" maxWidth='container.xl' w='100%' mb='40'>
+                        <Box display="flex" flexDirection="column" position="relative">
+                            <Box h="500px" maxWidth="100%" mb={7} color="gray.800">
+                                <Image objectFit='cover' borderRadius="lg" src={topMain} alt="main_image" />
+                            </Box>
+                            <Box mt={3} pt='20' ps='10' color="gray.500" position="absolute" textAlign="center" fontSize='5xl' fontWeight='semibold'>
+                            <p>Performance Running</p>
+                            <Box ms='-20' mt='3'>
+                                <Button 
+                                    colorScheme='yellow' 
+                                    marginInline={10} 
+                                    borderRadius='50px'
+                                    height='60px'
+                                    width='150px'
+                                    >Shop men's</Button>
+                                <Button 
+                                    colorScheme='yellow'
+                                    borderRadius='50px'
+                                    height='60px'
+                                    width='150px'
+                                    >Shop women's</Button>
+                            </Box>
+                            </Box>
                         </Box>
                     </Container>
-                </Box>
             </header>
             
             <Container className="threeBoxes" maxW="container.xl" mt={10}>
-                <Grid templateColumns="repeat(3, 1fr)">
+                <Grid templateColumns="repeat(3, 1fr)" gap={3}>
                     <Box>
                         <Image w="100%" borderRadius="lg" src={mainLeft} alt="image_one" />
                     </Box>
@@ -46,9 +60,8 @@ export default function Home() {
                     mr="4" 
                     mb="4" 
                     textTransform="initial" 
-                    colorScheme="teal"
-                    color="gray.800" 
-                    bg="blue.100"
+                    colorScheme="yellow"
+                    variant='outline'
                     >Running</Badge>
                     <Badge 
                     borderRadius="3xl" 

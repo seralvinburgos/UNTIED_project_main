@@ -1,7 +1,27 @@
-import { Container } from '@chakra-ui/react'
+import { Box, Container, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Text, ModalFooter, useDisclosure, Flex, Heading, Input, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
 export default function RootLayout() {
+    const OverlayOne = () => (
+        <ModalOverlay
+            bg='blackAlpha.100'
+            backdropFilter='blur(10px) hue-rotate(20deg)'
+        />
+    )
+    const OverlayTwo = () => (
+        <ModalOverlay
+            bg='blackAlpha.100'
+            backdropFilter='blur(10px) hue-rotate(20deg)'
+        />
+    )
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [overlay, setOverlay] = React.useState(<OverlayOne />)
+
+    const { toggleColorMode } = useColorMode()
+    const formBackground = useColorModeValue("white", "gray.700")
+
     return (
         <div className="root-layout">
             <header>
@@ -27,12 +47,38 @@ export default function RootLayout() {
                         </li>
                     </ul>
                     <ul className="nav-functions">
-                        <li>
+                        <Box>
+                            <Button borderRadius='25px' colorScheme='gray'>
                             <NavLink to="search">Search</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="Login">Login</NavLink>
-                        </li>
+                            </Button>
+                        </Box>
+                    
+                        <Box>
+                            <Button
+                                borderRadius='25px'
+                                colorScheme='yellow'
+                                onClick={() => {
+                                setOverlay(<OverlayOne />)
+                                onOpen()
+                                }}
+                            >
+                                Login
+                            </Button>
+                            <Modal isCentered isOpen={isOpen} onClose={onClose}>
+                                {overlay}
+                                <ModalContent>
+                                    <Flex alignItems="center" justifyContent="center">
+                                        <Flex direction="column" background={formBackground} p={12} rounded={6}>
+                                            <Heading mb={6}>Log in</Heading>
+                                            <Input placeholder="Please enter email" variant="filled" mb={3} type="email" />
+                                            <Input placeholder="*******" variant="filled" mb={6} type="password" />
+                                            <Button colorScheme="teal" mb={6}>Log in</Button>
+                                            <Button onClick={toggleColorMode} >Toggle Color Mode</Button>
+                                        </Flex>
+                                    </Flex>
+                                </ModalContent>
+                            </Modal>
+                        </Box>
                     </ul>
                 </nav>
             </header>
