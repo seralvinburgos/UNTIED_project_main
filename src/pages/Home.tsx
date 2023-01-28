@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Image, useColorMode, useColorModeValue, Textarea, VStack, Center } from "@chakra-ui/react";
 import topMain from "../assets/main4.jpg";
-import mainLeft from "../assets/main1.jpg";
-import mainCenter from "../assets/main2.jpg";
+import mainLeft from "../assets/narrow2.jpg";
+import mainCenter from "../assets/narrow4.jpg";
 import mainRightTop from "../assets/main6.jpg";
 import mainRightBottom from "../assets/main7.jpg"
 import activitiesPic from "../assets/narrow1.jpg";
@@ -57,13 +57,14 @@ export default function Home() {
             </Box>
             
 
+            {/* second section with large fonts */}
             <Box 
                 minH='55vh'
                 width='100%'
-                backgroundColor='whiteAlpha.500'
+                backgroundColor='whiteAlpha'
                 display='flex'
                 flexDirection='row'
-
+                mb='3'
             >
                 <Box>
                     <Textarea 
@@ -117,6 +118,7 @@ export default function Home() {
                             minH='40vh'
                             objectFit='cover'
                             maxW='90%'
+                            minW='300px'
                             height='auto'
                             boxSize='md'
                             mt='20%'
@@ -126,50 +128,97 @@ export default function Home() {
                     </Container>
                 </Box>
             </Box>
+
+             {/* middle three box section  */}
             <Box 
                 className="threeBoxes"
                 minH='55vh'
-                maxH='56vh'
+                maxH='70vh'
                 width='100%'
                 height='auto'
                 bgColor='whiteAlpha'
                 overflow='hidden'
+                ms='2'
                 >
                 <Grid templateColumns="repeat(3, 1fr)">
-                    <Box>
-                        <Image 
-                            minH='50vh'
-                            objectFit='cover'
-                            w="95%" 
-                            borderRadius="lg" 
-                            src={mainLeft} alt="image_one" />
+                    <Box display='flex' flexDirection='column' position='relative'>
+                        <Box>
+                            <Image 
+                                position='absolute'
+                                minH='50vh'
+                                minW='300px'
+                                objectFit='cover'
+                                w="95%" 
+                                borderRadius="lg" 
+                                src={mainLeft} alt="image_one" />
+                        </Box>
+                        <Box 
+                            position='absolute'
+                            color="whiteAlpha.900" 
+                            fontSize='2xl' 
+                            fontWeight='semibold'
+                            mt='110%'
+                            ms='7'
+                            >
+                            <p>Performance Running
+                            </p>
+                        <Box>
+                            <Button 
+                                mt='5'
+                                colorScheme='yellow' 
+                                borderRadius='50px'
+                                height='45px'
+                                width='100px'
+                                me='3'
+                                >Men's
+                            </Button>
+                            <Button 
+                            mt='5'
+                                colorScheme='yellow'
+                                borderRadius='50px'
+                                height='45px'
+                                width='100px'
+                                >Women's
+                            </Button>
+                        </Box>
+                    </Box>
                     </Box>
                     <Box>
-                        <Image 
-                            minH='50vh'
-                            objectFit='cover'
-                            w="95%" 
-                            borderRadius="lg" 
-                            src={mainCenter} alt="image_two" />
+                        <Box>
+                            <Image 
+                                position='relative'
+                                minH='50vh'
+                                minW='300px'
+                                objectFit='cover'
+                                w="95%" 
+                                borderRadius="lg" 
+                                src={mainCenter} alt="image_two" />
+                            </Box>
                     </Box>
-                    <Box 
-                        display='flex'
+                    <Box
+                        display='flex' 
                         flexDirection='column'
+                        position='relative'
                         minH='50vh'    
                         w='95%'
-                    >
+                        >
                         <Box>
                             <Image
+                                position='relative'
                                 objectFit='cover'
-                                height='95%'
-                                w="auto" 
+                                minH='24vh'
+                                minW='300px'
+                                w="100%" 
                                 borderRadius="lg" 
+                                mb='5'
                                 src={mainRightTop} alt="image_three_one" />
                         </Box>
                         <Box>
                             <Image 
+                                position='relative'
                                 objectFit='cover'
                                 minH='24vh'
+                                minW='300px'
                                 height='50%'
                                 w="100%" 
                                 borderRadius="lg" 
