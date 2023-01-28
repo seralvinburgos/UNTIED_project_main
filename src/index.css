@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-/* navbar */
+navbar
 .navbar {
   background-color: var(--color-grey);
   display: flex;

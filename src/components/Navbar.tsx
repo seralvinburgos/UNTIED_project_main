@@ -1,6 +1,7 @@
-import { Box, Container, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Text, ModalFooter, useDisclosure, Flex, Heading, Input, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { Box, Button, Modal, ModalOverlay, ModalContent, useDisclosure, Flex, Heading, Input, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { NavLink } from 'react-router-dom'
 import React from 'react'
+
 
 export default function Navbar() {
     const OverlayOne = () => (
@@ -26,11 +27,18 @@ export default function Navbar() {
     return (
         <>
             <header>
-            <nav className="navbar" >
-                    <div className="logo">
+                <Box 
+                    className="navbar"
+                    display='flex'
+                    flexDirection='row'
+                    >
+                    <Box className="logo">
                         <h1>Untied Shoes</h1>
-                    </div>
-                    <ul className="nav-links">
+                    </Box>
+                    <Box 
+                        className="nav-links"
+                        alignItems='center'
+                        >
                         <li>
                             <NavLink to="home">Home</NavLink>
                         </li>
@@ -46,14 +54,16 @@ export default function Navbar() {
                         <li>
                             <NavLink to="sale">Sale</NavLink>
                         </li>
-                    </ul>
-                    <ul className="nav-functions">
+                    </Box>
+                    <Box 
+                        className="nav-functions"
+                        alignItems='center'
+                        >
                         <Box>
                             <Button borderRadius='25px' colorScheme='gray'>
                             <NavLink to="search">Search</NavLink>
                             </Button>
                         </Box>
-                    
                         <Box>
                             <Button
                                 borderRadius='25px'
@@ -80,8 +90,8 @@ export default function Navbar() {
                                 </ModalContent>
                             </Modal>
                         </Box>
-                    </ul>
-                </nav>
+                    </Box>
+                </Box>
             </header>
         </>
     )
