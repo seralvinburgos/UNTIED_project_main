@@ -24,7 +24,7 @@ export default function Footer() {
                             minH='33vh'
                             ms='10'
                             >
-                            <Text mb='4' color='whiteAlpha.800' fontSize='3xl' fontWeight='bold'>Order & return status</Text>
+                            <Text mb='4' color='whiteAlpha.800' fontSize='3xl' fontWeight='bold'>Sign up now</Text>
                             <Text mb='10' color='whiteAlpha.800' fontSize='xl'>Stay in the loop with exclusive offers and product reviews</Text>
                             <Input mb='8' placeholder="Email" isRequired variant="unstyled" borderBottom='1px solid white' rounded='none' type="email" color='whiteAlpha.800'>
                             </Input>

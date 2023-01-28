@@ -1,6 +1,26 @@
-import { Box, Button, Modal, ModalOverlay, ModalContent, useDisclosure, Flex, Heading, Input, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { 
+    Box, 
+    Button, 
+    Modal, 
+    ModalOverlay, 
+    ModalContent, 
+    useDisclosure, 
+    Flex, 
+    Heading, 
+    Input, 
+    useColorMode, 
+    useColorModeValue, 
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+} from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import React from 'react'
+
 
 
 export default function Navbar() {
