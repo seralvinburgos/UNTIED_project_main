@@ -1,4 +1,5 @@
-import { Box, Button, Container, Grid, Image, useColorMode, useColorModeValue, Textarea, VStack, Center } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, Image, useColorMode, useColorModeValue, Textarea, VStack } from "@chakra-ui/react";
+import NavLink from "react-router-dom";
 import topMain from "../assets/main4.jpg";
 import mainLeft from "../assets/narrow2.jpg";
 import mainCenter from "../assets/narrow4.jpg";
@@ -36,13 +37,14 @@ export default function Home() {
                         <p>Performance Running
                         </p>
                         <Box>
-                            <Button 
+                            <Button as='a'
                                 colorScheme='yellow' 
                                 marginInline={10} 
                                 borderRadius='50px'
                                 height='60px'
                                 width='150px'
-                                >Shop men's
+                                >
+                                Shop men's
                             </Button>
                             <Button 
                                 colorScheme='yellow'
@@ -73,7 +75,7 @@ export default function Home() {
                         transform='rotate(-90deg)'
                         fontWeight='semibold'
                         ms='-5'
-                        mt='10'
+                        mt='20'
                         letterSpacing='2px'
                         border='none'
                         >
@@ -82,7 +84,8 @@ export default function Home() {
                 </Box>
                 <Box 
                     className='activitiesText'
-                    width='50%'
+                    minH='55vh'
+                    width='auto'
                     >
                     <VStack
                         spacing={1}
@@ -115,13 +118,13 @@ export default function Home() {
                 >
                     <Container centerContent>
                         <Image 
-                            minH='40vh'
+                            minH='45vh'
                             objectFit='cover'
                             maxW='90%'
                             minW='300px'
-                            height='auto'
+                            // height='40vh'
                             boxSize='md'
-                            mt='20%'
+                            mt='10%'
                             borderRadius='25px'
                             src={activitiesPic} alt='activitiesPicture'
                         />
@@ -135,9 +138,9 @@ export default function Home() {
                 minH='55vh'
                 maxH='70vh'
                 width='100%'
-                height='auto'
+                // height='auto'
                 bgColor='whiteAlpha'
-                overflow='hidden'
+                overflow='auto'
                 ms='2'
                 >
                 <Grid templateColumns="repeat(3, 1fr)">
@@ -201,25 +204,27 @@ export default function Home() {
                         position='relative'
                         minH='50vh'    
                         w='95%'
+                        gap='5'
+                        me='3'
                         >
-                        <Box>
+                        <Box h='50%'>
                             <Image
                                 position='relative'
                                 objectFit='cover'
                                 minH='24vh'
+                                height='100%'
                                 minW='300px'
                                 w="100%" 
                                 borderRadius="lg" 
-                                mb='5'
                                 src={mainRightTop} alt="image_three_one" />
                         </Box>
-                        <Box>
+                        <Box h='50%'>
                             <Image 
                                 position='relative'
                                 objectFit='cover'
                                 minH='24vh'
+                                height='100%'
                                 minW='300px'
-                                height='50%'
                                 w="100%" 
                                 borderRadius="lg" 
                                 src={mainRightBottom} alt="image_three_two" />

@@ -17,6 +17,10 @@ import {
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
 } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import React from 'react'
@@ -53,7 +57,9 @@ export default function Navbar() {
                     flexDirection='row'
                     >
                     <Box className="logo">
+                        <NavLink to='home'>
                         <h1>Untied Shoes</h1>
+                        </NavLink>
                     </Box>
                     <Box 
                         className="nav-links"
@@ -68,9 +74,16 @@ export default function Navbar() {
                         <li>
                             <NavLink to="women">Women</NavLink>
                         </li>
-                        <li>
-                            <NavLink to="categories">Categories</NavLink>
-                        </li>
+                        <Menu>
+                            <MenuButton>Categories</MenuButton>
+                            <MenuList>
+                                <MenuItem as='a' href='#'>Trail Running</MenuItem>
+                                <MenuItem as='a' href='#'>Road Running</MenuItem>
+                                <MenuItem as='a' href='#'>Active Lifestyle</MenuItem>
+                                <MenuItem as='a' href='#'>Hiking Running</MenuItem>
+                                <MenuItem as='a' href='#'>Comfrt Travel</MenuItem>
+                            </MenuList>
+                        </Menu>
                         <li>
                             <NavLink to="sale">Sale</NavLink>
                         </li>

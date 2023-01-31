@@ -46,7 +46,7 @@ export default function Search() {
                 <ModalHeader>Modal Title</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
-                    <Text>Custom backdrop filters!</Text>
+                    <Text>Custom backdrop filters!!!</Text>
                 </ModalBody>
                 <ModalFooter>
                     <Button onClick={onClose}>Close</Button>
