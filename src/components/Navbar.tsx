@@ -76,12 +76,12 @@ export default function Navbar() {
                         </li>
                         <Menu>
                             <MenuButton>Categories</MenuButton>
-                            <MenuList>
-                                <MenuItem as='a' href='#'>Trail Running</MenuItem>
-                                <MenuItem as='a' href='#'>Road Running</MenuItem>
-                                <MenuItem as='a' href='#'>Active Lifestyle</MenuItem>
-                                <MenuItem as='a' href='#'>Hiking Running</MenuItem>
-                                <MenuItem as='a' href='#'>Comfrt Travel</MenuItem>
+                            <MenuList fontWeight='semibold'>
+                                <MenuItem minH='45px' as='a' href='#'>Trail Running</MenuItem>
+                                <MenuItem minH='45px' as='a' href='#'>Road Running</MenuItem>
+                                <MenuItem minH='45px' as='a' href='#'>Active Lifestyle</MenuItem>
+                                <MenuItem minH='45px' as='a' href='#'>Hiking Running</MenuItem>
+                                <MenuItem minH='45px' as='a' href='#'>Comfort Travel</MenuItem>
                             </MenuList>
                         </Menu>
                         <li>

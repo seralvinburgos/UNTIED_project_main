@@ -160,33 +160,33 @@ export default function Home() {
                             color="whiteAlpha.900" 
                             fontSize='2xl' 
                             fontWeight='semibold'
-                            mt='110%'
+                            mt='115%'
                             ms='7'
                             >
                             <p>Performance Running
                             </p>
-                        <Box>
-                            <Button 
+                            <Box>
+                                <Button 
+                                    mt='5'
+                                    colorScheme='yellow' 
+                                    borderRadius='50px'
+                                    height='45px'
+                                    width='100px'
+                                    me='3'
+                                    >Men's
+                                </Button>
+                                <Button 
                                 mt='5'
-                                colorScheme='yellow' 
-                                borderRadius='50px'
-                                height='45px'
-                                width='100px'
-                                me='3'
-                                >Men's
-                            </Button>
-                            <Button 
-                            mt='5'
-                                colorScheme='yellow'
-                                borderRadius='50px'
-                                height='45px'
-                                width='100px'
-                                >Women's
-                            </Button>
+                                    colorScheme='yellow'
+                                    borderRadius='50px'
+                                    height='45px'
+                                    width='100px'
+                                    >Women's
+                                </Button>
+                            </Box>
                         </Box>
                     </Box>
-                    </Box>
-                    <Box>
+                    <Box display='flex' flexDirection='column' position='relative'>
                         <Box>
                             <Image 
                                 position='relative'
@@ -196,7 +196,29 @@ export default function Home() {
                                 w="95%" 
                                 borderRadius="lg" 
                                 src={mainCenter} alt="image_two" />
+                        </Box>
+                        <Box 
+                            position='absolute'
+                            color="whiteAlpha.900" 
+                            fontSize='2xl' 
+                            fontWeight='semibold'
+                            mt='115%'
+                            ms='7'
+                            >
+                            <p>Road Running
+                            </p>
+                            <Box>
+                                <Button 
+                                    mt='5'
+                                    colorScheme='yellow' 
+                                    borderRadius='50px'
+                                    height='45px'
+                                    width='100px'
+                                    me='3'
+                                    >Shop now
+                                </Button>
                             </Box>
+                        </Box>
                     </Box>
                     <Box
                         display='flex' 
@@ -221,7 +243,8 @@ export default function Home() {
                         <Box h='50%'>
                             <Image 
                                 position='relative'
-                                objectFit='cover'
+                                objectFit='cover'  
+                                objectPosition='right'
                                 minH='24vh'
                                 height='100%'
                                 minW='300px'
