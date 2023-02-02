@@ -84,9 +84,6 @@ export default function Navbar() {
                                 <MenuItem minH='45px' as='a' href='#'>Comfort Travel</MenuItem>
                             </MenuList>
                         </Menu>
-                        <li>
-                            <NavLink to="sale">Sale</NavLink>
-                        </li>
                     </Box>
                     <Box 
                         className="nav-functions"

@@ -16,7 +16,6 @@ export default function Men() {
                 backgroundColor='pink.100'
                 w='100%'
                 display='flex'
-                flexDirection=''
                 >
             </Box>
             <Box>

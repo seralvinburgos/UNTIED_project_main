@@ -1,11 +1,13 @@
 import { Box, Button, Container, Grid, Image, useColorMode, useColorModeValue, Textarea, VStack } from "@chakra-ui/react";
-import NavLink from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import topMain from "../assets/main4.jpg";
 import mainLeft from "../assets/narrow2.jpg";
 import mainCenter from "../assets/narrow4.jpg";
 import mainRightTop from "../assets/main6.jpg";
 import mainRightBottom from "../assets/main7.jpg"
 import activitiesPic from "../assets/narrow1.jpg";
+
+import Men from "./Men";
 
 export default function Home() {
     const { toggleColorMode } = useColorMode()
@@ -44,14 +46,15 @@ export default function Home() {
                                 height='60px'
                                 width='150px'
                                 >
-                                Shop men's
+                                <a href="./men">Shop men's</a>
                             </Button>
-                            <Button 
+                            <Button as='a' 
                                 colorScheme='yellow'
                                 borderRadius='50px'
                                 height='60px'
                                 width='150px'
-                                >Shop women's
+                                >
+                                <a href="./women">Shop women's</a>
                             </Button>
                         </Box>
                     </Box>
