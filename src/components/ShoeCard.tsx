@@ -13,12 +13,10 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Butto
                     <Stack mt='6' spacing='3'>
                     <Heading size='md'>Living room Sofa</Heading>
                     <Text>
-                        This sofa is perfect for modern tropical spaces, baroque inspired
-                        spaces, earthy toned spaces and for people who love a chic design with a
-                        sprinkle of vintage design.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque similique iusto incidunt nostrum a quaerat nam dolorem modi accusantium facilis?
                     </Text>
                     <Text color='blue.600' fontSize='2xl'>
-                        $450
+                        $165
                     </Text>
                     </Stack>
                 </CardBody>
@@ -34,7 +32,6 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Butto
                     </ButtonGroup>
                 </CardFooter>
             </Card>
-        
         </>
     )
  }
