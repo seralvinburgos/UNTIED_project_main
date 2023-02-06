@@ -23,7 +23,7 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Butto
                 <Divider />
                 <CardFooter>
                     <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='blue'>
+                    <Button variant='filled' colorScheme='blue'>
                         Buy now
                     </Button>
                     <Button variant='ghost' colorScheme='blue'>
