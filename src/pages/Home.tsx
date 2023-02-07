@@ -6,6 +6,7 @@ import mainCenter from "../assets/narrow4.jpg";
 import mainRightTop from "../assets/main6.jpg";
 import mainRightBottom from "../assets/main7.jpg"
 import activitiesPic from "../assets/narrow1.jpg";
+import React from "react";
 
 import Men from "./Men";
 
@@ -46,6 +47,7 @@ export default function Home() {
                                 height='60px'
                                 width='150px'
                                 >
+                                {/* <NavLink to='men'>Shop Men's</NavLink> */}
                                 <a href="./men">Shop men's</a>
                             </Button>
                             <Button as='a' 
@@ -97,20 +99,20 @@ export default function Home() {
                         fontWeight="semibold"
                         mt='25%'
                         >
-                        <Box>
-                            Trail Running
+                        <Box as="a">
+                            <a href="./trail">Trail Running</a>
                         </Box>
-                        <Box>
-                            Road Running
+                        <Box as="a">
+                            <a href="./road">Road Running</a>
                         </Box>
-                        <Box>
-                            Active Lifestyle
+                        <Box as="a">
+                            <a href="./lifestyle">Active Lifestyle</a>
                         </Box>
-                        <Box>
-                            Hiking
+                        <Box as="a">
+                            <a href="./hiking">Hiking</a>
                         </Box>
-                        <Box>
-                            Comfort Travel
+                        <Box as="a">
+                            <a href="./comfort">Comfort Travel</a>
                         </Box>
                     </VStack>
                 </Box>
@@ -169,22 +171,26 @@ export default function Home() {
                             <p>Performance Running
                             </p>
                             <Box>
-                                <Button 
+                                <Button
+                                    as="a"
                                     mt='5'
                                     colorScheme='yellow' 
                                     borderRadius='50px'
                                     height='45px'
                                     width='100px'
                                     me='3'
-                                    >Men's
+                                    >
+                                    <a href="./men">Men's</a>
                                 </Button>
                                 <Button 
-                                mt='5'
+                                    as="a"
+                                    mt='5'
                                     colorScheme='yellow'
                                     borderRadius='50px'
                                     height='45px'
                                     width='100px'
-                                    >Women's
+                                    >
+                                    <a href="./women">Women's</a>
                                 </Button>
                             </Box>
                         </Box>
@@ -212,13 +218,15 @@ export default function Home() {
                             </p>
                             <Box>
                                 <Button 
+                                    as="a"
                                     mt='5'
                                     colorScheme='yellow' 
                                     borderRadius='50px'
                                     height='45px'
                                     width='100px'
                                     me='3'
-                                    >Shop now
+                                    >
+                                    <a href="./road">Shop now</a>
                                 </Button>
                             </Box>
                         </Box>
