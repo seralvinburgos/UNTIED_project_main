@@ -8,6 +8,9 @@ import card6 from '../assets/card6.jpg'
 import card7 from '../assets/card7.jpg'
 import card8 from '../assets/card8.jpg'
 import card9 from '../assets/card9.jpg'
+import card10 from '../assets/card10.jpg'
+import card11 from '../assets/card11.jpg'
+import card12 from '../assets/card12.jpg'
 
 export default function Men() {
     return (
@@ -293,6 +296,68 @@ export default function Men() {
                             />
                             <Stack mt='3' spacing='2'>
                             <Heading size='sm'>Sneaker 3</Heading>
+                            <Text fontSize='xs'>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, harum?
+                            </Text>
+                            <Text color='yellow.500' fontSize='xl'>
+                                $165
+                            </Text>
+                            </Stack>
+                        </CardBody>
+                        <CardFooter mt='-5'>
+                            <ButtonGroup spacing='2'>
+                            <Button variant='solid' colorScheme='yellow' size='sm'>
+                                Buy now
+                            </Button>
+                            <Button variant='ghost' colorScheme='yellow' size='sm'>
+                                Add to cart
+                            </Button>
+                            </ButtonGroup>
+                        </CardFooter>
+                    </Card>
+                </Box>
+                <Box>
+                    <Card maxW='xs'>
+                        <CardBody>
+                            <Image
+                            boxSize='sm'
+                            src={card11}
+                            alt='Green Nike'
+                            borderRadius='md'
+                            />
+                            <Stack mt='3' spacing='2'>
+                            <Heading size='sm'>Sneaker 11</Heading>
+                            <Text fontSize='xs'>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, harum?
+                            </Text>
+                            <Text color='yellow.500' fontSize='xl'>
+                                $165
+                            </Text>
+                            </Stack>
+                        </CardBody>
+                        <CardFooter mt='-5'>
+                            <ButtonGroup spacing='2'>
+                            <Button variant='solid' colorScheme='yellow' size='sm'>
+                                Buy now
+                            </Button>
+                            <Button variant='ghost' colorScheme='yellow' size='sm'>
+                                Add to cart
+                            </Button>
+                            </ButtonGroup>
+                        </CardFooter>
+                    </Card>
+                </Box>
+                <Box>
+                    <Card maxW='xs'>
+                        <CardBody>
+                            <Image
+                            boxSize='sm'
+                            src={card12}
+                            alt='Green Nike'
+                            borderRadius='md'
+                            />
+                            <Stack mt='3' spacing='2'>
+                            <Heading size='sm'>Sneaker 12</Heading>
                             <Text fontSize='xs'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, harum?
                             </Text>
