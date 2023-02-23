@@ -100,9 +100,11 @@ export default function Navbar() {
                         alignItems='center'
                         >
                         <Box>
-                            <Button borderRadius='25px' colorScheme='gray'>
-                            <NavLink to="search">Search</NavLink>
-                            </Button>
+                            
+                            {/* <NavLink to="search">Search</NavLink> */}
+                            <Input mt='4' w='60' borderRadius='25px' colorScheme='blackAlpha' placeholder="Search" variant="filled" mb={3} type="search" />
+
+                            
                         </Box>
                         <Box>
                             <Button
@@ -124,7 +126,8 @@ export default function Navbar() {
                                             <Input placeholder="Please enter email" variant="filled" mb={3} type="email" />
                                             <Input placeholder="*******" variant="filled" mb={6} type="password" />
                                             <Button colorScheme="yellow" mb={6}>Log in</Button>
-                                            <Button onClick={toggleColorMode} >Toggle Color Mode</Button>
+                                            <NavLink to='register'onClick={onClose}>Create Account</NavLink>
+                                            <Button mt={10} onClick={toggleColorMode} >Toggle Color Mode</Button>
                                         </Flex>
                                     </Flex>
                                 </ModalContent>

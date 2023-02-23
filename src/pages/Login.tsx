@@ -10,7 +10,9 @@ export default function Login() {
                 <Heading mb={6}>Log in</Heading>
                 <Input placeholder="Please enter email" variant="filled" mb={3} type="email" />
                 <Input placeholder="*******" variant="filled" mb={6} type="password" />
-                <Button colorScheme="alphaBlack" mb={6}>Log in</Button>
+                <Button colorScheme="alphaBlack">Log in</Button>
+                <Button colorScheme="alphaBlack">Register</Button>
+                
                 <Button onClick={toggleColorMode} >Toggle Color Mode</Button>
             </Flex>
         </Flex>

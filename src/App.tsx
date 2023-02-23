@@ -20,6 +20,7 @@ import Comfort from './pages/Comfort';
 import Sale from './pages/Sale';
 import Search from './pages/Search';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 // layouts
@@ -42,6 +43,7 @@ const router = createBrowserRouter(
       <Route path="sale" element={<Sale />} />
       <Route path="search" element={<Search />} />
       <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
     </Route>
   )
 )
